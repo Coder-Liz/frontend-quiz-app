@@ -39,7 +39,12 @@
             />
           </svg>
 
-          <button type="button" id="theme-toggle" class="header__theme-toggle">
+          <button
+            type="button"
+            id="theme-toggle"
+            class="header__theme-toggle"
+            aria-label="Toggle theme"
+          >
             <svg
               width="64"
               height="40"
@@ -145,7 +150,9 @@
                 <span id="question-number"></span>
                 of 10</span
               >
-              <h2 id="question" class="questions__text"></h2>
+              <h2 id="question" class="questions__text">
+                <span class="visually-hidden">Current Question:</span>
+              </h2>
             </div>
             <div class="questions__progress-bar-wrapper">
               <div class="questions__progress-bar">
