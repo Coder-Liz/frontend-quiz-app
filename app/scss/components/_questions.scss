@@ -74,7 +74,7 @@
 
   &__answer-options {
     display: grid;
-    gap: 12px;
+    gap: clamp(0.75rem, 0.39rem + 1.53vw, 1.5rem);
   }
 
   &__answer-btn {

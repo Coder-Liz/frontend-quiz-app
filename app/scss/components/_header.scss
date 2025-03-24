@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-block: 16px;
+    padding-block: clamp(1rem, -1.06rem + 8.79vw, 5.3125rem);
   }
 
   &__selected-quiz {
