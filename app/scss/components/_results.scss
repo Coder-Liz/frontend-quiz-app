@@ -1,0 +1,108 @@
+@use '../util' as u;
+
+.results {
+  display: none;
+
+  &__wrapper {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include u.breakpoint(large) {
+      flex-direction: row;
+      gap: 120px;
+      padding-top: 85px;
+    }
+  }
+
+  &__title {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 1.78rem + 3.06vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  &__title-span {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 1.78rem + 3.06vw, 4rem);
+    font-weight: 300;
+    line-height: 1;
+    display: block;
+  }
+
+  &__group-wrapper {
+    display: grid;
+    gap: clamp(0.75rem, 0.15rem + 2.55vw, 2rem);
+
+    @include u.breakpoint(large) {
+      flex: 1;
+      width: 564px;
+    }
+  }
+
+  &__score-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 0.28rem + 3.06vw, 2.5rem);
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 1.52rem + 2.04vw, 3rem);
+    background-color: var(--clr-pure-white);
+    border-radius: clamp(0.75rem, 0.39rem + 1.53vw, 1.5rem);
+  }
+
+  &__selected-wrapper {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__selected-text {
+    font: inherit;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--clr-dark-navy);
+  }
+
+  &__score {
+    font: inherit;
+    font-size: 5.5rem;
+    font-size: clamp(5.5rem, 3.83rem + 7.13vw, 9rem);
+    font-weight: 500;
+    line-height: 1;
+    color: var(--clr-dark-navy);
+  }
+
+  &__paragraph {
+    font: inherit;
+    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 0.95rem + 0.76vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--clr-grey-navy);
+  }
+
+  &__play-again-btn {
+    font: inherit;
+    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 0.83rem + 1.27vw, 1.75rem);
+    font-weight: 500;
+    line-height: 1;
+    color: var(--clr-pure-white);
+
+    padding: clamp(0.75rem, 0.15rem + 2.55vw, 2rem);
+    background-color: var(--clr-purple);
+    border-radius: clamp(0.75rem, 0.39rem + 1.53vw, 1.5rem);
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--clr-light-purple);
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@use '../util' as u;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  background: var(--clr-light-grey);
+  color: var(--clr-dark-navy);
+  min-height: 100vh;
+
+  background-image: url('/img/pattern-background-mobile-light.svg');
+  background-size: cover;
+
+  @include u.breakpoint(medium) {
+    background-image: url('/img/pattern-background-tablet-light.svg');
+    background-size: cover;
+  }
+
+  @include u.breakpoint(large) {
+    background-image: url('/img/pattern-background-desktop-light.svg');
+    background-size: cover;
+  }
+}
+
+body.dark-mode {
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  background: var(--clr-dark-navy);
+  color: var(--clr-pure-white);
+  min-height: 100vh;
+
+  background-image: url('/img/pattern-background-mobile-dark.svg');
+  background-size: cover;
+
+  @include u.breakpoint(medium) {
+    background-image: url('/img/pattern-background-tablet-dark.svg');
+    background-size: cover;
+  }
+
+  @include u.breakpoint(large) {
+    background-image: url('/img/pattern-background-desktop-dark.svg');
+    background-size: cover;
+  }
+
+  h1 {
+    color: var(--clr-pure-white);
+  }
+
+  h2 {
+    color: var(--clr-pure-white);
+  }
+
+  .quiz__subject-btn,
+  .questions__answer-btn,
+  .results__score-wrapper {
+    background-color: var(--clr-navy);
+    color: var(--clr-pure-white);
+  }
+
+  .questions__text,
+  .results__selected-text,
+  .header__selected-text,
+  .results__score {
+    color: var(--clr-pure-white);
+  }
+
+  .results__paragraph,
+  .questions__num {
+    color: var(--clr-light-bluish);
+  }
+
+  .header__icon-moon path,
+  .header__icon-sun path {
+    fill: var(--clr-pure-white);
+  }
+
+  #theme-toggle g circle {
+    transform: translateX(24px);
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+ul > li {
+  list-style: none;
+}

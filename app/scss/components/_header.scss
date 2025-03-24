@@ -1,0 +1,50 @@
+@use '../util' as u;
+
+.header {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 16px;
+  }
+
+  &__selected-quiz {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__selected-text {
+    font: inherit;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--clr-dark-navy);
+  }
+
+  &__toggle-wrapper {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__theme-toggle {
+    background: none;
+    border: none;
+    will-change: transform;
+
+    rect {
+      stroke: var(--clr-purple);
+    }
+    circle {
+      fill: var(--clr-purple);
+      transition: transform 0.5s;
+    }
+
+    &:hover g circle {
+      transform: scale(1.75);
+    }
+  }
+}

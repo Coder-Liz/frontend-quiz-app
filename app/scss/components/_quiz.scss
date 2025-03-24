@@ -1,0 +1,67 @@
+@use '../util' as u;
+
+.quiz {
+  &__wrapper {
+    display: grid;
+    gap: 40px;
+    padding-top: 32px;
+
+    @include u.breakpoint(large) {
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 85px;
+    }
+  }
+
+  &__title-wrapper {
+    display: grid;
+    gap: 16px;
+
+    @include u.breakpoint(large) {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    span {
+      display: inline-block;
+      font: inherit;
+      font-weight: 300;
+      line-height: 1;
+    }
+  }
+
+  &__options {
+    display: grid;
+    gap: 12px;
+  }
+
+  &__subject-btn {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 0.83rem + 1.27vw, 1.75rem);
+    font-weight: 500;
+    line-height: 1;
+    color: var(--clr-dark-navy);
+    background-color: var(--clr-pure-white);
+    outline: none;
+    border: none;
+    border-radius: clamp(0.75rem, 0.39rem + 1.53vw, 1.5rem);
+    cursor: pointer;
+    box-shadow: 0 16px 40px 0 hsla(218, 26%, 66%, 0.14);
+
+    &:hover {
+      color: var(--clr-purple);
+    }
+  }
+}
