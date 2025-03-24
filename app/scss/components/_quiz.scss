@@ -47,6 +47,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    height: clamp(4rem, 3.16rem + 3.57vw, 5.75rem);
     padding: 12px;
     font-size: 1.125rem;
     font-size: clamp(1.125rem, 0.83rem + 1.27vw, 1.75rem);
